@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hickies</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="This field contains information about your page. It is usually around two sentences long.">
+    <meta name="author" content="Conor Sheils">
+    <link rel="stylesheet" href="style.css">
+    <script src="Script.js"></script>
+</header>
+<body>
+<div class="FullScreen">
+        
+        <div class="DivText"> 
+            <h1 class="Heading">HICKIES Original<h1>      
+            <p class="Stars">&bigstar; &bigstar; &bigstar; &bigstar; &bigstar;</p> 
+            <p class="Reviews">1,293 reviews</p> 
+        </div>
+
+        <div class="Prices">
+             <p class="Discount">$14,99</p>
+             <p class="Price">$17,99 </p> 
+             <p class="DiscountPrc">25% off</p>
+        </div>
+
+        <div>
+            <p class="Text">Online exclusive</p>
+        </div>
+
+        <div class="ButDiv">
+            <p class="Text5"> Colours:</p>
+            <p id="SelColour" Class="Text6"></p>
+            <br>
+        
+        <button id="b1" class="button red"></button>
+        <button id="b2" class="button purple"></button>
+        <button id="b3" class="button black"></button>
+        <button id="b4" class="button white"></button>
+        <button id="b5" class="button orange"></button>
+        <button id="b6" class="button yellow"></button>
+        <button id="b7" class="button blue1"></button>
+        <button id="b8" class="button blue2"></button>
+        <button id="b9" class="button coral"></button>
+        <button id="b10" class="button blue3"></button>
+        <button id="b11" class="button green"></button>
+        <br>
+
+        <button id="b12" class="button pink"></button>
+        <button id="b13" class="button coral1"></button>
+        <button id="b14" class="button cyan"></button>
+        <button id="b15" class="button ash"></button>
+        <button id="b16" class="button brown"></button>
+        <button id="b17" class="button blue4"></button>
+        <button id="b18" class="button grey"></button>
+    
+        
+        </div>
+
+        <div>
+        <p class="Text2">size guide</p>
+        <p class="Text2"> your custom fit </p>
+        </div>
+
+       
+
+        <div>
+        
+        <p class="text3" >0</p>   
+        <button id="buttonModal" class="buttonModal">Add to cart</button>
+            <div id="Modal1" class="Modal">
+                <div class="ModalContent">
+                    <p class="ModalText">Please add the quantity of the item you have selected</p>
+                    <div class="ModalDiv">
+                        <p id="SelColour" class="ModalText1"></p>
+                        <button class="Minus">-</button>
+                        <p class="ModalText2">0</p>
+                        <button class="Plus">+</button>
+                    </div>
+                    <span class="close">agree</span>
+                    <span class="close1">cancel</span>
+                    
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <p class="Text3"> Details</p>
+
+        <hr>
+
+        <div>
+            need help?
+            <br>
+            <br>
+        
+            Shipping and Returns
+        </div>
+
+     
+    </div>
+  <script>
+//he add to code to enable the function of modal 1
+
+// puts the model into a var
+var modal = document.getElementById("Modal1");
+
+// puts the add to cart button to a var
+var button = document.getElementById("buttonModal");
+
+
+var span = document.getElementsByClassName("close")[0];
+var span1 = document.getElementsByClassName("close1")[0];
+
+//enables the modal when add to cart button is clicked
+button.onclick = function() {
+    modal.style.display = "block";
+}
+
+//lets the span tag agree close the model
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// lets span tag cancel close the model
+span1.onclick = function() {
+    modal.style.display = "none";
+}
+
+//closes model if clicked outside of its area
+window.onclick = function(event) {
+    if (event.target == modal){
+        modal.style.display = "none";
+    }
+}
+  </script>
+
+  <script>
+      //code to change selected colour
+      var b1 = document.getElementById("b1");
+      var b2 = document.getElementById("b2");
+      var b3 = document.getElementById("b3");
+      var b4 = document.getElementById("b4");
+      var b5 = document.getElementById("b5");
+      var b6 = document.getElementById("b6");
+      var b7 = document.getElementById("b7");
+      var b8 = document.getElementById("b8");
+      var b9 = document.getElementById("b9");
+      var b10 = document.getElementById("b10");
+      var b11 = document.getElementById("b11");
+      var b12 = document.getElementById("b12");
+      var b13 = document.getElementById("b13");
+      var b14 = document.getElementById("b14");
+      var b15 = document.getElementById("b15");
+      var b16 = document.getElementById("b16");
+      var b17 = document.getElementById("b17");
+      var b18 = document.getElementById("b18");
+      var x = "None";
+        // displays current colour
+      function DisplayColour(){
+          document.getElementById("SelColour").innerHTML = x;
+      } 
+
+        // changes colour according to which button is pressed
+      b1.onclick = function(){
+          x="Rosso Corsa";
+          DisplayColour();
+      }
+
+      b2.onclick = function(){
+          x="Purple Haze";
+          DisplayColour();
+      }
+
+      b3.onclick = function(){
+          x="Midnight black";
+          DisplayColour();
+      }
+
+      b4.onclick = function(){
+          x="Bianco Avus";
+          DisplayColour();
+      }
+
+      b5.onclick = function(){
+          x="Mandarin Orange";
+          DisplayColour();
+      }
+
+      b6.onclick = function(){
+          x="Giallo Modena";
+          DisplayColour();
+      }
+
+      b7.onclick = function(){
+          x="Ocean Blue";
+          DisplayColour();
+      }
+
+      b8.onclick = function(){
+          x="Pale Blue";
+          DisplayColour();
+      }
+
+      b9.onclick = function(){
+          x="Oceanic Coral";
+          DisplayColour();
+      }
+
+      b10.onclick = function(){
+          x="Electric Blue";
+          DisplayColour();
+      }
+
+      b11.onclick = function(){
+          x="Verde Mugello";
+          DisplayColour();
+      }
+
+      b12.onclick = function(){
+          x="Holiday Pink";
+          DisplayColour();
+      }
+
+      b13.onclick = function(){
+          x="Beach Coral";
+          DisplayColour();
+      }
+
+      b14.onclick = function(){
+          x="Garage Green";
+          DisplayColour();
+      }
+
+      b15.onclick = function(){
+          x="Dying Purple";
+          DisplayColour();
+      }
+
+      b16.onclick = function(){
+          x="Leather Brown";
+          DisplayColour();
+      }
+
+      b17.onclick = function(){
+          x="Sky blue";
+          DisplayColour();
+      }
+
+      b18.onclick = function(){
+          x="Jacob's Grey";
+          DisplayColour();
+      }
+
+
+      DisplayColour();
+
+
+
+
+
+   
+  </script>
+</body>
+</html>

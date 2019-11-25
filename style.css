@@ -1,0 +1,450 @@
+
+ h1{
+     margin: 0;
+     padding: 0;
+ }
+
+ .Heading{
+      padding: 10px;
+      font-size: 300%;
+      margin-left: 0px;
+  }
+
+  .Reviews{
+      margin: 10px;
+      color: grey;
+      font-size: 90%;
+      display: inline;
+      margin-left: 100px;
+  }
+
+  .Stars{
+    margin-left: 20px;
+    display: inline;
+   }
+
+   .Prices{
+       margin: 10px;
+       padding-left: 0px;
+   }
+
+    .DivText{
+        padding: 10px;
+        padding-left: 0px;
+    }
+    
+   .Discount{
+        color: rgb(165, 48, 68);
+        font-size: 200%;
+        display: inline;
+        margin-left: 0px;
+        font-weight: bold;
+        
+    }
+     
+   .Price{
+    color: grey;
+    font-size: 150%;
+    display: inline;
+    margin-left: 80px;
+}
+.DiscountPrc{
+    color: grey;
+    font-size: 150%;
+    display: inline;
+    margin-left: 80px;
+    font-weight: bold;
+}
+.Text{
+    font-size: 190%;
+    margin-left: 20px;
+}
+
+.Text5{
+    display: inline;
+    font-weight: bold;
+    font-size: 150%;
+    margin-left: 10px;
+    padding-bottom: 200px;
+    
+}
+
+.Text6{
+    display: inline;
+  
+}
+
+
+.button{
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    padding:20px;
+    text-align: centre;
+    border-radius: 50%;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    display: table-cell;
+}
+
+.red{
+    background-color: red;
+}
+
+.red:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.purple{
+    background-color: rgb(99, 37, 201);
+}
+
+.purple:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.black{
+    background-color: black;
+}
+
+.black:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.white{
+    background-color:white;
+}
+
+.white:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.orange:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.yellow{
+    background-color: rgb(236, 236, 69);
+}
+
+.yellow:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.blue1{
+    background-color: rgb(32, 35, 240);
+}
+
+.blue1:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+
+.blue2{
+    background-color: rgb(23, 48, 131);
+}
+
+.blue2:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.coral{
+    background-color: rgb(199, 117, 87);
+}
+
+.coral:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.blue3{
+    background-color: rgb(61, 230, 215);
+}
+
+.blue3:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.green{
+    background-color: rgb(12, 240, 12);
+}
+
+.green:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.pink{
+    background-color: rgb(176, 61, 180);
+}
+
+.pink:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.coral1{
+    background-color: rgb(248, 149, 113);
+}
+
+.coral1:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.cyan{
+    background-color: rgb(67, 97, 69);
+}
+
+.cyan:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.ash{
+    background-color: rgb(75, 56, 75);
+}
+
+.ash:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.brown{
+    background-color: rgb(58, 23, 17);
+}
+
+.brown:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.blue4{
+    background-color:rgb(74, 184, 184);
+}
+
+.blue4:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.grey{
+    background-color: grey;
+}
+
+.grey:focus{
+    border: solid;
+    border-color: grey;
+    padding: 25px;
+    border-spacing: 90px 90px;
+}
+
+.Text2{
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 100%;
+    margin: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.text3{
+    display: inline;
+    font-size: 150%;
+    margin-left: 20px;
+    padding:20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: centre;
+    border-radius: 40px;
+    border: solid;
+    margin-left: 25px;
+    
+}
+
+.buttonModal{
+    font-weight: bold;
+    font-size: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    cursor: text;
+    border: 1px;
+    border-style: solid;
+    padding: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+    border-radius:40px;
+    display: inline-block;
+    margin: 10px;
+}
+
+
+
+.Modal1{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding-top: 100px;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgb(0,0,0,0.4);
+}
+
+.ModalContent{
+    background-color: white;
+    margin: 10px;
+    border: 1px solid black;
+    width: 30%;
+    height: auto;
+    
+}
+.ModalText{
+    text-align: center;
+}
+
+.ModalText1{
+    display: inline;
+    text-align: center;
+}
+
+.ModalText2{
+    display: inline;
+    text-align: center;
+}
+
+.ModalDiv{
+    text-align: right;
+}
+
+.Plus   {
+    margin: auto;
+    margin-right:20px;
+    margin-left: 20px; 
+    cursor: pointer;
+    padding: 1px;
+    text-align: centre;
+    border-radius: 100%;
+    border: none;
+    color: white;
+    font-size: 400%;
+    background-color: black;
+}
+
+.Minus    {
+    margin: auto;
+    cursor: pointer;
+    padding: 1px;
+    text-align: centre;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 400%;
+    margin-right: 20px;
+    background-color: black;
+}
+
+.close{
+    display: inline;
+    font-size: 28px;
+    border: solid;
+    border-radius: 4px;
+    background-color:rgb(91, 219, 52); 
+    margin: 10px;
+    padding: 0;
+    text-align: right;
+}
+
+.close:hover,
+.close:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close1{
+    text-align: right;
+    display: inline;
+    font-size: 28px;
+    border: solid;
+    border-radius: 4px;
+    background-color:rgb(153, 60, 60); 
+    margin: 10px;
+    margin-left: 10px;
+    padding: 0px;
+    cursor: pointer;
+
+}
+
+.close1:hover
+.close1:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.FullScreen{
+    position: absolute;
+    height: auto;
+    width: 100%;
+    bottom: 0px;
+    top: 0px;
+    left: 0;
+}
+
+.Text4{
+    font-size: 1%
+}
