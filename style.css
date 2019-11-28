@@ -93,10 +93,11 @@
 }
 
 .red:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .purple{
@@ -104,10 +105,11 @@
 }
 
 .purple:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .black{
@@ -115,10 +117,11 @@
 }
 
 .black:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .white{
@@ -126,10 +129,11 @@
 }
 
 .white:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .orange{
@@ -137,10 +141,11 @@
 }
 
 .orange:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .yellow{
@@ -148,10 +153,11 @@
 }
 
 .yellow:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .blue1{
@@ -159,10 +165,11 @@
 }
 
 .blue1:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 
@@ -171,10 +178,11 @@
 }
 
 .blue2:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .coral{
@@ -182,10 +190,11 @@
 }
 
 .coral:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .blue3{
@@ -193,10 +202,11 @@
 }
 
 .blue3:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .green{
@@ -204,10 +214,11 @@
 }
 
 .green:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .pink{
@@ -215,10 +226,11 @@
 }
 
 .pink:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .coral1{
@@ -226,10 +238,11 @@
 }
 
 .coral1:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .cyan{
@@ -237,10 +250,11 @@
 }
 
 .cyan:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .ash{
@@ -248,10 +262,11 @@
 }
 
 .ash:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .brown{
@@ -259,10 +274,11 @@
 }
 
 .brown:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .blue4{
@@ -270,10 +286,11 @@
 }
 
 .blue4:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .grey{
@@ -281,10 +298,11 @@
 }
 
 .grey:focus{
-    border: solid;
-    border-color: grey;
-    padding: 25px;
-    border-spacing: 90px 90px;
+    padding: 25px; 
+    outline: 2px solid black;
+    outline-offset: 5px;
+    -moz-outline-radius: 100%;
+    outline-color: grey; 
 }
 
 .Text2{
@@ -307,7 +325,6 @@
     border-radius: 40px;
     border: solid;
     margin-left: 25px;
-    
 }
 
 .buttonModal{
@@ -326,10 +343,29 @@
     display: inline-block;
     margin: 10px;
 }
+.buttonModal1{
+    font-weight: bold;
+    font-size: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    cursor: text;
+    border: 1px;
+    border-style: solid;
+    padding: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+    border-radius:40px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.buttonModal1:hover{
+    background-color: grey;
+}
 
 
-
-.Modal1{
+.Modal{
     display: none;
     position: fixed;
     z-index: 1;
@@ -347,9 +383,12 @@
 .ModalContent{
     background-color: white;
     margin: 10px;
-    border: 1px solid black;
+    outline: 1px solid black;
+    outline-offset: -5px;
+    padding: 20px;
     width: 30%;
     height: auto;
+    margin: 0 auto;
     
 }
 .ModalText{
@@ -397,13 +436,17 @@
     background-color: black;
 }
 
+.modal.footer{
+    padding: 20px;
+    text-align: right;
+}
+
 .close{
     display: inline;
     font-size: 28px;
-    border: solid;
     border-radius: 4px;
     background-color:rgb(91, 219, 52); 
-    margin: 10px;
+    margin: 20px;
     padding: 0;
     text-align: right;
 }
@@ -419,7 +462,6 @@
     text-align: right;
     display: inline;
     font-size: 28px;
-    border: solid;
     border-radius: 4px;
     background-color:rgb(153, 60, 60); 
     margin: 10px;
@@ -429,22 +471,94 @@
 
 }
 
-.close1:hover
+.close1:hover,
 .close1:focus{
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
 
-.FullScreen{
+body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* .FullScreen{
     position: absolute;
     height: auto;
     width: 100%;
     bottom: 0px;
     top: 0px;
     left: 0;
-}
+} */
 
 .Text4{
     font-size: 1%
 }
+
+.qty .count {
+    color: #000;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 0 2px
+    ;min-width: 35px;
+    text-align: center;
+}
+
+.qty .plus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    background: black;
+    }
+.qty .minus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    background-clip: padding-box;
+    background: black;
+}
+.qty.mt-5 {
+    text-align: right;
+}
+.minus:hover{
+    background-color: #717fe0 !important;
+}
+.plus:hover{
+    background-color: #717fe0 !important;
+}
+
+/*Prevent text selection */
+span{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+input{  
+    border: 0;
+    width: 2%;
+}
+nput::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:disabled{
+    background-color:white;
+} */
+         

@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Incrementer styling -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <title>Hickies</title>
     <meta charset="UTF-8">
     <meta name="description" content="This field contains information about your page. It is usually around two sentences long.">
@@ -18,8 +24,8 @@
         </div>
 
         <div class="Prices">
-             <p class="Discount">$14,99</p>
-             <p class="Price">$17,99 </p> 
+             <p class="Discount">$0</p>
+             <p class="Price">$0 </p> 
              <p class="DiscountPrc">25% off</p>
         </div>
 
@@ -31,7 +37,7 @@
             <p class="Text5"> Colours:</p>
             <p id="SelColour" Class="Text6"></p>
             <br>
-        
+        <div>
         <button id="b1" class="button red"></button>
         <button id="b2" class="button purple"></button>
         <button id="b3" class="button black"></button>
@@ -52,7 +58,7 @@
         <button id="b16" class="button brown"></button>
         <button id="b17" class="button blue4"></button>
         <button id="b18" class="button grey"></button>
-    
+        </div>
         
         </div>
 
@@ -65,19 +71,30 @@
 
         <div>
         
-        <p class="text3" >0</p>   
-        <button id="buttonModal" class="buttonModal">Add to cart</button>
+        <p class="text3" type="number" ></p>   
+        <button id="buttonModal" class="buttonModal" >Add to cart</button>
+
             <div id="Modal1" class="Modal">
                 <div class="ModalContent">
                     <p class="ModalText">Please add the quantity of the item you have selected</p>
                     <div class="ModalDiv">
-                        <p id="SelColour" class="ModalText1"></p>
-                        <button class="Minus">-</button>
+                        <p id="SeletedColours" class="ModalText1">peepeepo</p>
+                        <!-- <button class="Minus">-</button>
                         <p class="ModalText2">0</p>
-                        <button class="Plus">+</button>
+                        <button class="Plus">+</button> -->
+
+                        <div class="qty mt-5">
+                            <span class="minus bg-dark">-</span>
+                            <input type="number" class="count" name="qty" value="1">
+                            <span class="plus bg-dark">+</span>
+                        </div>
+
                     </div>
-                    <span class="close">agree</span>
-                    <span class="close1">cancel</span>
+                    <div class="modal footer">
+                        <span id="Agree" class="close">agree</span>
+                        <span class="close1">cancel</span>
+                    </div>
+                    
                     
                 </div>
             </div>
@@ -85,7 +102,8 @@
 
         <hr>
 
-        <p class="Text3"> Details</p>
+        <p id="Details" class="Text3"> Details</p>
+        <p id="test"></p>
 
         <hr>
 
@@ -97,8 +115,10 @@
             Shipping and Returns
         </div>
 
-     
+    
     </div>
+
+
   <script>
 //he add to code to enable the function of modal 1
 
@@ -108,30 +128,171 @@ var modal = document.getElementById("Modal1");
 // puts the add to cart button to a var
 var button = document.getElementById("buttonModal");
 
+var DiscPrice = document.getElementsByClassName("Discount")[0];
+var Price = document.getElementsByClassName("Price")[0];
 
 var span = document.getElementsByClassName("close")[0];
 var span1 = document.getElementsByClassName("close1")[0];
 
-//enables the modal when add to cart button is clicked
-button.onclick = function() {
-    modal.style.display = "block";
+var NumOfSelItems =document.getElementsByClassName("text3")[0];
+
+var Details = document.getElementById("Details");
+
+var test = document.getElementById("test");
+
+var text = document.getElementById("SelColour");
+var element = document.getElementById("SeletedColours");
+
+var Count = 0;
+
+NumOfSelItems.innerHTML = 0;
+
+// Changes the number of items in the basket
+function ChangeNumOfItems(){
+    Count =Count+ Number($('.count').val());
+    NumOfSelItems.innerHTML = Count;
 }
 
-//lets the span tag agree close the model
+// Changes the original price and discounted price value
+function ChangePrice(){
+    Price.innerHTML = "$" + (17.99*$('.count').val()).toFixed(2);
+    DiscPrice.innerHTML = "$" + (14.99*$('.count').val()).toFixed(2);
+}
+
+//Changes the details of the items in the cart
+function ChangeDetails(){
+    
+     var count = $('.count').val();
+     var i ;
+
+    for(i = 0; i < count; i++){
+    var colors = document.createElement("BUTTON");
+    if(text.innerHTML == "Rosso Corsa"){
+        colors.classList = "button red";
+    }
+
+    if(text.innerHTML == "Purple Haze"){
+        colors.classList = "button purple";
+    }
+
+    if(text.innerHTML == "Midnight black"){
+        colors.classList = "button black";
+    }
+
+    if(text.innerHTML == "Bianco Avus"){
+        colors.classList = "button white";
+    }
+
+    if(text.innerHTML == "Mandarin Orange"){
+        colors.classList = "button orange";
+    }
+
+    if(text.innerHTML == "Giallo Modena"){
+        colors.classList = "button yellow";
+    }
+
+    if(text.innerHTML == "Ocean Blue"){
+        colors.classList = "button blue1";
+    }
+
+    if(text.innerHTML == "Pale Blue"){
+        colors.classList = "button blue2";
+    }
+
+    if(text.innerHTML == "Oceanic Coral"){
+        colors.classList = "button coral";
+    }
+
+    if(text.innerHTML == "Electric Blue"){
+        colors.classList = "button blue3";
+    }
+
+    if(text.innerHTML == "Verde Mugello"){
+        colors.classList = "button green";
+    }
+
+    if(text.innerHTML == "Holiday Pink"){
+        colors.classList = "button pink";
+    }
+
+    if(text.innerHTML == "Beach Coral"){
+        colors.classList = "button coral1";
+    }
+
+    if(text.innerHTML == "Garage Green"){
+        colors.classList = "button cyan";
+    }
+
+    if(text.innerHTML == "Dying Purple"){
+        colors.classList = "button ash";
+    }
+
+    if(text.innerHTML == "Leather Brown"){
+        colors.classList = "button brown";
+    }
+
+    if(text.innerHTML == "Sky blue"){
+        colors.classList = "button blue4";
+    }
+
+    if(text.innerHTML == "Jacob's Grey"){
+        colors.classList = "button grey";
+    }
+
+    test.appendChild(colors);
+    }
+    // while(Details.firstchild){
+    //     detail.removeChild(Details.firstChild);
+    // }
+
+    // var count = $('.count').val();
+    // var i ;
+    // for(i = 0; i < count; i++){
+    //     var colors = document.createElement("BUTTON");
+    //     color.style = "button";
+    //     details.appendChild(color);
+    // }
+}
+
+//enables the modal when add to cart button is clicked
+// and changes the text to match the corresponding coplour
+button.onclick = function() {
+    if(text.innerHTML == "None"){
+        button.classList = "buttonModal1";
+
+    }else{
+    button.classList = "buttonModal";
+    modal.style.display = "block";
+    element.innerHTML = text.innerText || text.textContent ;
+    }
+}
+
+
+
+
+//lets the span tag agree close the model andcall a function to change the price and discounted price
 span.onclick = function() {
     modal.style.display = "none";
+    ChangePrice();
+    ChangeNumOfItems();
+    ChangeDetails();
+
 }
 
-// lets span tag cancel close the model
-span1.onclick = function() {
-    modal.style.display = "none";
-}
+
 
 //closes model if clicked outside of its area
 window.onclick = function(event) {
     if (event.target == modal){
         modal.style.display = "none";
     }
+
+
+
+    // lets span tag cancel close the model
+    span1.onclick = function() {
+    modal.style.display = "none";
+}
 }
   </script>
 
@@ -261,5 +422,23 @@ window.onclick = function(event) {
 
    
   </script>
+
+
+  <script>
+  		$(document).ready(function(){
+		    $('.count').prop('disabled', true);
+   			$(document).on('click','.plus',function(){
+				$('.count').val(parseInt($('.count').val()) + 1 );
+    		});
+        	$(document).on('click','.minus',function(){
+    			$('.count').val(parseInt($('.count').val()) - 1 );
+    				if ($('.count').val() == -1) {
+						$('.count').val(0);
+					}
+    	    	});
+ 		});  
+  </script>
+
+
 </body>
 </html>
