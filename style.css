@@ -74,6 +74,10 @@
   
 }
 
+.DivColours{
+    padding: 1%;
+}
+
 
 .button{
     -webkit-transition-duration: 0.4s;
@@ -625,6 +629,7 @@ input:disabled{
 
 .Items{
     display: block;
+    margin: right 600px;
 }
 
 .close2{
@@ -633,4 +638,8 @@ input:disabled{
     padding: 5px;
     box-align: right;
     margin-left: 485px; 
+}
+
+.BasketColours{
+    padding: 10px;
 }

@@ -37,7 +37,7 @@
             <p class="Text5"> Colours:</p>
             <p id="SelColour" Class="Text6"></p>
             <br>
-        <div>
+        <div class="DivColours">
         <button id="b1" class="button red"></button>
         <button id="b2" class="button purple"></button>
         <button id="b3" class="button black"></button>
@@ -101,12 +101,15 @@
 
 
         <hr>
+
         <div>
             <p id="Details" class="Text3"> Details</p>
-            <p id="BasketColours"></p>
+            <p id="BasketColours" class="BasketColours"></p>
+            
             <div> 
-            <p id="TotalPrice" class="Discount"></p>
+            <p id="TotalPrice" class="Discount"></p>    
             </div>
+
             <p id="TotalPrice" class="Discount"></p>
             <button id="buttonCheckout" class="buttonCheckout" >Checkout</button>
         </div>
@@ -117,8 +120,8 @@
                 <p class="ModalCheckoutText">Items In Checkout</p>
                 <hr>
                 <div class="modal Checkout">
-                    <p id="ItemSumary" class="Items"></p>
-                    <p id="FinalPrice">Total: </p>
+                    <pre id="ItemSumary" class="Items"></pre>
+                    <p id="FinalPrice">Total: $</p>
                 </div>
                 
                 <span id="Finish" class="close2">Checkout</span>
@@ -130,7 +133,7 @@
         <hr>
 
         <div>
-            need help?
+            Need help?
             <br>
             <br>
         
@@ -287,7 +290,7 @@ function ChangeDetails(){
 
     TotalPrice += +((PriceColour*$('.count').val()).toFixed(2));
     Sumary.textContent += text.innerText || text.textContent;
-    Sumary.textContent += ": " + $('.count').val()+ " Price : "+ PriceColour*$('.count').val();
+    Sumary.textContent += ": " + $('.count').val()+ " Price : $"+ (PriceColour*$('.count').val()).toFixed(2) + "\n";
 
 }
     // Checks if any items are in cart and adds a checkout button if there is
