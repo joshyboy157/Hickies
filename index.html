@@ -78,12 +78,12 @@
                 <div class="ModalContent">
                     <p class="ModalText">Please add the quantity of the item you have selected</p>
                     <div class="ModalDiv">
-                        <p id="SeletedColours" class="ModalText1">peepeepo</p>
                         <!-- <button class="Minus">-</button>
                         <p class="ModalText2">0</p>
                         <button class="Plus">+</button> -->
 
                         <div class="qty mt-5">
+                            <p id="SeletedColours" class="ModalText1">peepeepo</p>
                             <span class="minus bg-dark">-</span>
                             <input type="number" class="count" name="qty" value="1">
                             <span class="plus bg-dark">+</span>
@@ -100,10 +100,29 @@
             </div>
         </div>
 
+
+
         <hr>
 
         <p id="Details" class="Text3"> Details</p>
         <p id="test"></p>
+
+        <button id="buttonCheckout" class="buttonCheckout" >Checkout</button>
+
+        <div id="Modal2" class="Modal1">
+            <div class="ModalContent1">
+                <p class="ModalCheckoutText">Items In Checkout</p>
+                <hr>
+                <div class="modal Checkout">
+                    <p id="ItemSumary" class="Items"></p>
+                    <p id="FinalPrice">Total: </p>
+                </div>
+
+                <span id="Finish" class="close2">agree</span>
+                
+            </div>
+        </div>
+    </div>
 
         <hr>
 
@@ -121,6 +140,8 @@
 
   <script>
 //he add to code to enable the function of modal 1
+
+var CheckOut = document.getElementById("buttonCheckout");
 
 // puts the model into a var
 var modal = document.getElementById("Modal1");
@@ -145,6 +166,17 @@ var element = document.getElementById("SeletedColours");
 
 var Count = 0;
 
+var Sumary = document.getElementById("ItemSumary");
+
+var PriceColour;
+
+var TotalPrice = 0;
+
+var CheckOut = document.getElementById("buttonCheckout");
+var CheckOutModal = document.getElementById("Modal2");
+var Finish = document.getElementById("Finish");
+var Total = document.getElementById("FinalPrice");
+
 NumOfSelItems.innerHTML = 0;
 
 // Changes the number of items in the basket
@@ -156,7 +188,7 @@ function ChangeNumOfItems(){
 // Changes the original price and discounted price value
 function ChangePrice(){
     Price.innerHTML = "$" + (17.99*$('.count').val()).toFixed(2);
-    DiscPrice.innerHTML = "$" + (14.99*$('.count').val()).toFixed(2);
+    DiscPrice.innerHTML = "$" + (PriceColour*$('.count').val()).toFixed(2);
 }
 
 //Changes the details of the items in the cart
@@ -164,95 +196,115 @@ function ChangeDetails(){
     
      var count = $('.count').val();
      var i ;
+     var ColourPrice = 0;
 
     for(i = 0; i < count; i++){
     var colors = document.createElement("BUTTON");
     if(text.innerHTML == "Rosso Corsa"){
         colors.classList = "button red";
+        PriceColour = 14.99;
     }
 
     if(text.innerHTML == "Purple Haze"){
         colors.classList = "button purple";
+        PriceColour = 13.99;
     }
 
     if(text.innerHTML == "Midnight black"){
         colors.classList = "button black";
+        PriceColour = 13.99;
     }
 
     if(text.innerHTML == "Bianco Avus"){
         colors.classList = "button white";
+        PriceColour = 12.99;
     }
 
     if(text.innerHTML == "Mandarin Orange"){
         colors.classList = "button orange";
+        PriceColour = 15.99;
     }
 
     if(text.innerHTML == "Giallo Modena"){
         colors.classList = "button yellow";
+        PriceColour = 17.99;
     }
 
     if(text.innerHTML == "Ocean Blue"){
         colors.classList = "button blue1";
+        PriceColour = 14.99;
     }
 
     if(text.innerHTML == "Pale Blue"){
         colors.classList = "button blue2";
+        PriceColour = 14.99;
     }
 
     if(text.innerHTML == "Oceanic Coral"){
         colors.classList = "button coral";
+        PriceColour = 10.99;
     }
 
     if(text.innerHTML == "Electric Blue"){
         colors.classList = "button blue3";
+        PriceColour = 9.99;
     }
 
     if(text.innerHTML == "Verde Mugello"){
         colors.classList = "button green";
+        PriceColour = 11.99;
     }
 
     if(text.innerHTML == "Holiday Pink"){
         colors.classList = "button pink";
+        PriceColour = 14.99;
     }
 
     if(text.innerHTML == "Beach Coral"){
         colors.classList = "button coral1";
+        PriceColour = 15.99;
     }
 
     if(text.innerHTML == "Garage Green"){
         colors.classList = "button cyan";
+        PriceColour = 16.99;
     }
 
     if(text.innerHTML == "Dying Purple"){
         colors.classList = "button ash";
+        PriceColour = 12.99;
     }
 
     if(text.innerHTML == "Leather Brown"){
         colors.classList = "button brown";
+        PriceColour = 15.99;
     }
 
     if(text.innerHTML == "Sky blue"){
         colors.classList = "button blue4";
+        PriceColour = 17.99;
     }
 
     if(text.innerHTML == "Jacob's Grey"){
         colors.classList = "button grey";
+        PriceColour = 14.99;
     }
-
+   
     test.appendChild(colors);
     }
-    // while(Details.firstchild){
-    //     detail.removeChild(Details.firstChild);
-    // }
 
-    // var count = $('.count').val();
-    // var i ;
-    // for(i = 0; i < count; i++){
-    //     var colors = document.createElement("BUTTON");
-    //     color.style = "button";
-    //     details.appendChild(color);
-    // }
+    TotalPrice += PriceColour*$('.count').val();
+    Sumary.textContent += text.innerText || text.textContent;
+    Sumary.textContent += ": " + $('.count').val()+ " Price : "+ PriceColour*$('.count').val();
+    // Sumary.textContent += br;
+
 }
+    // Checks if any items are in cart and adds a checkout button if there is
+    function DisplayCheckout (){
+        if (Count > 0){
+            CheckOut.classList = "buttonCheckout1";
+        }
+    }
 
 //enables the modal when add to cart button is clicked
 // and changes the text to match the corresponding coplour
@@ -270,13 +322,13 @@ button.onclick = function() {
 
 
 
-//lets the span tag agree close the model andcall a function to change the price and discounted price
+//lets the span tag agree close the model andcall a function to change the price and discounted price.Also calls function to add checkout button
 span.onclick = function() {
     modal.style.display = "none";
+    ChangeDetails();
     ChangePrice();
     ChangeNumOfItems();
-    ChangeDetails();
-
+    DisplayCheckout ();
 }
 
 
@@ -294,6 +346,20 @@ window.onclick = function(event) {
     modal.style.display = "none";
 }
 }
+
+    // displays checkout modal when the checkout button is pressed
+    CheckOut.onclick = function(){
+        CheckOutModal.style.display = "block";
+        Total.textContent += (TotalPrice).toFixed(2);
+    }
+
+    // Refreshes page when checked out
+
+    Finish.onclick = function(){
+        window.location.reload();
+    }
+  
+
   </script>
 
   <script>
@@ -425,6 +491,8 @@ window.onclick = function(event) {
 
 
   <script>
+        // code for the counter inside the add to cart modal
+
   		$(document).ready(function(){
 		    $('.count').prop('disabled', true);
    			$(document).on('click','.plus',function(){
@@ -432,11 +500,31 @@ window.onclick = function(event) {
     		});
         	$(document).on('click','.minus',function(){
     			$('.count').val(parseInt($('.count').val()) - 1 );
-    				if ($('.count').val() == -1) {
+    				if ($('.count').val() == -1) {              // doesnt let value go below 0
 						$('.count').val(0);
 					}
     	    	});
  		});  
+  </script>
+
+  
+
+  <script>
+    // var CheckOut = document.getElementById("buttonCheckout");
+    // var CheckOutModal = document.getElementById("Modal2");
+    // var Finish = document.getElementById("Finish");
+
+    // // displays checkout modal when the checkout button is pressed
+    // CheckOut.onclick = function(){
+    //     CheckOutModal.style.display = "block";
+    // }
+
+    // // Refreshes page when checked out
+
+    // Finish.onclick = function(){
+    //     window.location.reload();
+    // }
+  
   </script>
 
 
