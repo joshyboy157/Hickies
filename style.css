@@ -626,3 +626,11 @@ input:disabled{
 .Items{
     display: block;
 }
+
+.close2{
+    color: white;
+    background-color: black;
+    padding: 5px;
+    box-align: right;
+    margin-left: 485px; 
+}

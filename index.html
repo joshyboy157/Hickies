@@ -78,9 +78,7 @@
                 <div class="ModalContent">
                     <p class="ModalText">Please add the quantity of the item you have selected</p>
                     <div class="ModalDiv">
-                        <!-- <button class="Minus">-</button>
-                        <p class="ModalText2">0</p>
-                        <button class="Plus">+</button> -->
+
 
                         <div class="qty mt-5">
                             <p id="SeletedColours" class="ModalText1">peepeepo</p>
@@ -103,11 +101,16 @@
 
 
         <hr>
-
-        <p id="Details" class="Text3"> Details</p>
-        <p id="test"></p>
-
-        <button id="buttonCheckout" class="buttonCheckout" >Checkout</button>
+        <div>
+            <p id="Details" class="Text3"> Details</p>
+            <p id="BasketColours"></p>
+            <div> 
+            <p id="TotalPrice" class="Discount"></p>
+            </div>
+            <p id="TotalPrice" class="Discount"></p>
+            <button id="buttonCheckout" class="buttonCheckout" >Checkout</button>
+        </div>
+     
 
         <div id="Modal2" class="Modal1">
             <div class="ModalContent1">
@@ -117,8 +120,8 @@
                     <p id="ItemSumary" class="Items"></p>
                     <p id="FinalPrice">Total: </p>
                 </div>
-
-                <span id="Finish" class="close2">agree</span>
+                
+                <span id="Finish" class="close2">Checkout</span>
                 
             </div>
         </div>
@@ -149,17 +152,20 @@ var modal = document.getElementById("Modal1");
 // puts the add to cart button to a var
 var button = document.getElementById("buttonModal");
 
+// put the discount price and var price in a var
 var DiscPrice = document.getElementsByClassName("Discount")[0];
 var Price = document.getElementsByClassName("Price")[0];
 
+// var for agree and cancel to close add to cart modal
 var span = document.getElementsByClassName("close")[0];
 var span1 = document.getElementsByClassName("close1")[0];
 
+// var for the number of items in the basket
 var NumOfSelItems =document.getElementsByClassName("text3")[0];
 
 var Details = document.getElementById("Details");
 
-var test = document.getElementById("test");
+var test = document.getElementById("BasketColours");
 
 var text = document.getElementById("SelColour");
 var element = document.getElementById("SeletedColours");
@@ -168,15 +174,18 @@ var Count = 0;
 
 var Sumary = document.getElementById("ItemSumary");
 
-var PriceColour;
+var PriceColour=0;
 
 var TotalPrice = 0;
+
+var DisplayTotal = document.getElementById("TotalPrice");
 
 var CheckOut = document.getElementById("buttonCheckout");
 var CheckOutModal = document.getElementById("Modal2");
 var Finish = document.getElementById("Finish");
 var Total = document.getElementById("FinalPrice");
 
+// Sets the default amount of items in the basket to 0
 NumOfSelItems.innerHTML = 0;
 
 // Changes the number of items in the basket
@@ -189,9 +198,10 @@ function ChangeNumOfItems(){
 function ChangePrice(){
     Price.innerHTML = "$" + (17.99*$('.count').val()).toFixed(2);
     DiscPrice.innerHTML = "$" + (PriceColour*$('.count').val()).toFixed(2);
+    DisplayTotal.innerHTML = "$"+(TotalPrice).toFixed(2);
 }
 
-//Changes the details of the items in the cart
+//Changes the details of the items in the cart.Calculates the total price and calculates the amount of the items that are currently being added to the cart
 function ChangeDetails(){
     
      var count = $('.count').val();
@@ -202,101 +212,82 @@ function ChangeDetails(){
     var colors = document.createElement("BUTTON");
     if(text.innerHTML == "Rosso Corsa"){
         colors.classList = "button red";
-        PriceColour = 14.99;
     }
 
     if(text.innerHTML == "Purple Haze"){
         colors.classList = "button purple";
-        PriceColour = 13.99;
     }
 
     if(text.innerHTML == "Midnight black"){
         colors.classList = "button black";
-        PriceColour = 13.99;
     }
 
     if(text.innerHTML == "Bianco Avus"){
         colors.classList = "button white";
-        PriceColour = 12.99;
     }
 
     if(text.innerHTML == "Mandarin Orange"){
         colors.classList = "button orange";
-        PriceColour = 15.99;
     }
 
     if(text.innerHTML == "Giallo Modena"){
         colors.classList = "button yellow";
-        PriceColour = 17.99;
     }
 
     if(text.innerHTML == "Ocean Blue"){
         colors.classList = "button blue1";
-        PriceColour = 14.99;
     }
 
     if(text.innerHTML == "Pale Blue"){
         colors.classList = "button blue2";
-        PriceColour = 14.99;
     }
 
     if(text.innerHTML == "Oceanic Coral"){
         colors.classList = "button coral";
-        PriceColour = 10.99;
     }
 
     if(text.innerHTML == "Electric Blue"){
         colors.classList = "button blue3";
-        PriceColour = 9.99;
     }
 
     if(text.innerHTML == "Verde Mugello"){
         colors.classList = "button green";
-        PriceColour = 11.99;
     }
 
     if(text.innerHTML == "Holiday Pink"){
         colors.classList = "button pink";
-        PriceColour = 14.99;
     }
 
     if(text.innerHTML == "Beach Coral"){
         colors.classList = "button coral1";
-        PriceColour = 15.99;
     }
 
     if(text.innerHTML == "Garage Green"){
         colors.classList = "button cyan";
-        PriceColour = 16.99;
     }
 
     if(text.innerHTML == "Dying Purple"){
         colors.classList = "button ash";
-        PriceColour = 12.99;
     }
 
     if(text.innerHTML == "Leather Brown"){
         colors.classList = "button brown";
-        PriceColour = 15.99;
     }
 
     if(text.innerHTML == "Sky blue"){
         colors.classList = "button blue4";
-        PriceColour = 17.99;
     }
 
     if(text.innerHTML == "Jacob's Grey"){
         colors.classList = "button grey";
-        PriceColour = 14.99;
     }
    
     test.appendChild(colors);
     }
 
-    TotalPrice += PriceColour*$('.count').val();
+    TotalPrice += +((PriceColour*$('.count').val()).toFixed(2));
     Sumary.textContent += text.innerText || text.textContent;
     Sumary.textContent += ": " + $('.count').val()+ " Price : "+ PriceColour*$('.count').val();
-    // Sumary.textContent += br;
 
 }
     // Checks if any items are in cart and adds a checkout button if there is
@@ -307,7 +298,7 @@ function ChangeDetails(){
     }
 
 //enables the modal when add to cart button is clicked
-// and changes the text to match the corresponding coplour
+// and changes the text inside the modal to match the corresponding coplour
 button.onclick = function() {
     if(text.innerHTML == "None"){
         button.classList = "buttonModal1";
@@ -322,7 +313,7 @@ button.onclick = function() {
 
 
 
-//lets the span tag agree close the model andcall a function to change the price and discounted price.Also calls function to add checkout button
+//lets the span tag agree close the model and call a function to change the price and discounted price.Also calls function to add checkout button.Calls a function to calculate the total pirce.
 span.onclick = function() {
     modal.style.display = "none";
     ChangeDetails();
@@ -383,104 +374,124 @@ window.onclick = function(event) {
       var b17 = document.getElementById("b17");
       var b18 = document.getElementById("b18");
       var x = "None";
-        // displays current colour
+        // displays current colour and price of the current price.
       function DisplayColour(){
           document.getElementById("SelColour").innerHTML = x;
+          DiscPrice.innerHTML = "$" + PriceColour;
+          Price.innerHTML = "$" + 17.99;
       } 
 
-        // changes colour according to which button is pressed
+        // changes colour according to which button is pressed 
       b1.onclick = function(){
           x="Rosso Corsa";
+          PriceColour = 14.99;
           DisplayColour();
       }
 
       b2.onclick = function(){
           x="Purple Haze";
+          PriceColour = 13.99;
           DisplayColour();
       }
 
       b3.onclick = function(){
           x="Midnight black";
+          PriceColour = 13.99;
           DisplayColour();
       }
 
       b4.onclick = function(){
           x="Bianco Avus";
+          PriceColour = 12.99;
           DisplayColour();
       }
 
       b5.onclick = function(){
           x="Mandarin Orange";
+          PriceColour = 15.99;
           DisplayColour();
       }
 
       b6.onclick = function(){
           x="Giallo Modena";
+          PriceColour = 17.99;
           DisplayColour();
       }
 
       b7.onclick = function(){
           x="Ocean Blue";
+          PriceColour = 14.99;
           DisplayColour();
       }
 
       b8.onclick = function(){
           x="Pale Blue";
+          PriceColour = 14.99;
           DisplayColour();
       }
 
       b9.onclick = function(){
           x="Oceanic Coral";
+          PriceColour = 10.99;
           DisplayColour();
       }
 
       b10.onclick = function(){
           x="Electric Blue";
+          PriceColour = 9.99;
           DisplayColour();
       }
 
       b11.onclick = function(){
           x="Verde Mugello";
+          PriceColour = 11.99;
           DisplayColour();
       }
 
       b12.onclick = function(){
           x="Holiday Pink";
+          PriceColour = 14.99;
           DisplayColour();
       }
 
       b13.onclick = function(){
           x="Beach Coral";
+          PriceColour = 15.99;
           DisplayColour();
       }
 
       b14.onclick = function(){
           x="Garage Green";
+          PriceColour = 16.99;
           DisplayColour();
       }
 
       b15.onclick = function(){
           x="Dying Purple";
           DisplayColour();
+          PriceColour = 12.99;
       }
 
       b16.onclick = function(){
           x="Leather Brown";
           DisplayColour();
+          PriceColour = 15.99;
       }
 
       b17.onclick = function(){
           x="Sky blue";
           DisplayColour();
+          PriceColour = 17.99;
       }
 
       b18.onclick = function(){
           x="Jacob's Grey";
           DisplayColour();
+          PriceColour = 14.99;
       }
 
 
-      DisplayColour();
+       DisplayColour();
 
 
 
@@ -505,26 +516,6 @@ window.onclick = function(event) {
 					}
     	    	});
  		});  
-  </script>
-
-  
-
-  <script>
-    // var CheckOut = document.getElementById("buttonCheckout");
-    // var CheckOutModal = document.getElementById("Modal2");
-    // var Finish = document.getElementById("Finish");
-
-    // // displays checkout modal when the checkout button is pressed
-    // CheckOut.onclick = function(){
-    //     CheckOutModal.style.display = "block";
-    // }
-
-    // // Refreshes page when checked out
-
-    // Finish.onclick = function(){
-    //     window.location.reload();
-    // }
-  
   </script>
 
 
